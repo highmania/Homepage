@@ -123,17 +123,17 @@ nav .nav_list li a:hover{
     
 }
 @media (max-width: 1400px) {
-    .startpage .video_box {
+    .Intro .video_box {
       width: 100%;
       height: auto;
     }
     
-    .startpage video {
+    .Intro video {
       width: 100%;
       height: auto;
     }
     
-    .startpage .text_box {
+    .Intro .text_box {
       text-align: center;
     }
   }
