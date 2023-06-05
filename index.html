@@ -19,120 +19,142 @@
 
 <body>
     <header>
-            <nav>
-                <ul class="nav_list">
-                    <li><a href="#first">Intro</a></li>
-                    <li><a href="#second">Profile</a></li>
-                    <li><a href="#third">Web</a></li>
-                    <li><a href="#forth">Design</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul class="nav_list">
+                <li><a href="#first">Intro</a></li>
+                <li><a href="#second">Profile</a></li>
+                <li class="dropdown"><a href="#third">Portfolio</a>
+                    <ul>
+                        <li><a href="#third">Orion</a></li>
+                        <li><a href="#forth">Elandeats</a></li>
+                    </ul>
+                </li>
+                <li><a href="#fifth">Design</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div id="fullpage">
             <div class="section first Intro">
                 <div class="video_box">
-                    <video src="./images/video/Desktop Look Awesome PART 4_1080pFHR.mp4" poster="video/main_video_poster.jpg" muted="" loop="" autoplay data-keepplaying></video>
+                    <video class="Video" loop muted data-autoplay playsinline data-keepplaying>
+                        <source src="./images/video/Desktop Look Awesome PART 4_1080pFHR.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="text_box">
-                    <p class="text">꾸준히 발전해나가는 웹퍼블리셔가 되겠습니다.<br> 류지웅입니다.</p>
+                    <p class="text">꾸준히 발전해나가는 <span>웹퍼블리셔</span>가 되겠습니다.<br> 류지웅입니다.</p>
                 </div>
-            </div> 
+            </div>
             <div class="section second profile">
                 <h2>Profile</h2>
                 <div>
                     <div class="profile_box">
                         <div class="p_left">
-                            <div class="p_img">
-                                <a href="#"><img src="./images/csr1.png" alt="프로필사진"></a>
-                            </div>
-                        </div>
-                        <div class="p_middle">
-                            <div class="info_box">
-                                <h3>Web Publisher</h3>
-                                <p class="hashtag">#이성적인 #긍정적인 #책임감있는</p>
-                                <p>안녕하세요. 류지웅입니다.<br>현재에 멈추지 않고 끊임없는 노력으로 점차 완성되어가는 모습을 보여드리겠습니다.</p>
-                            </div>
-                            <p><span>Name</span>류지웅</p>
-                            <p><span>Phone</span>010 - 8574 - 3110</p>
-                            <p><span>E-mail</span>tokan311@naver.com</p>
-                            <p><span>23.04</span>반응형 UI/UX 웹디자인&amp;웹퍼블리셔 양성과정 수료</p>
-
+                            <a href="#"><img src="./images/csr1.png" alt="프로필사진"></a>
                         </div>
                         <div class="p_right">
-                            <div class="skil_box">
-                                <div class="skil photoshop">
-                                    <p>Photoshop</p>
-                                    <p class="bar"><span></span></p>
-                                </div>
-                                <div class="skil illust">
-                                    <p>Illustrator</p>
-                                    <p class="bar"><span></span></p>
-                                </div>
-                                <div class="skil html">
-                                    <p>HTML,CSS</p>
-                                    <p class="bar"><span></span></p>
-                                </div>
-                                <div class="skil js">
-                                    <p>JavaScript,jQuery</p>
-                                    <p class="bar"><span></span></p>
-                                </div>
-                                <div class="skil figma">
-                                    <p>adobe XD</p>
-                                    <p class="bar"><span></span></p>
-                                </div>
+                            <div class="info_box">
+                                <h3>profile</h3>
+                                <p class="hashtag">#이성적인 #긍정적인 #책임감있는</p>
+                                <p class="introduce">안녕하세요. 류지웅입니다.<br>
+                                   현재에 멈추지 않고 끊임없는 노력으로<br>
+                                   점차 완성되어가는 모습을 보여드리겠습니다.</p>
+                            </div>
+                            <div class="info_box">
+                                <p><span>Name</span> : 류지웅<br>
+                                   <span>Phone</span> : 010 - 8574 - 3110<br>
+                                   <span>E-mail</span> : tokan311@naver.com</p>
+                            </div>
+                            <div class="info_box">
+                                <p><span>2023</span> 반응형 UI/UX 웹디자인&amp;웹퍼블리셔 양성과정 수료<br>
+                                   <span>2023</span> 웹디자인 기능사</p>
+                            </div>
+                            <div class="skill_box">
+                                <h3>skills</h3>
+                                <ul>
+                                    <li>
+                                        <img src="./images/icons/photoshop.png" alt="포토샵icon">
+                                        <p>Photoshop</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/icons/illustrator.png" alt="일러스트레이터icon">
+                                        <p>Illustrator</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/icons/html5.png" alt="HTMLicon">
+                                        <p>HTML</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/icons/css3.png" alt="CSS3icon">
+                                        <p>CSS</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/icons/javascript.png" alt="자바스크립트icon">
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/icons/jquery.png" alt="jqueryicon">
+                                        <p>jQuery</p>
+                                    </li>
+                                    <li>
+                                        <img src="./images/icons/xd.png" alt="XDicon">
+                                        <p>adobe XD</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section third web">
+            <div class="section third portfolio">
                 <h2>Portfolio</h2>
-                <ul class="w_project">
-                    <li class="">
-                        <div class="web_contents">
-                            <div class="w_img">
-                                <img src="project/design/musinsa_mockup.jpg" alt="오리온사이트이미지">
-                            </div>
-                            <ul class="w_info">
-                                <li class="w_name"><span>프로젝트명</span>:오리온(반응형)</li>
-                                <li><span>메인페이지</span></li>
-                                <li><span>Tool</span>HTML, CSS, JAVASCRIPT, Abobe XD</li>
-                                <li>
-                                    <ul class="w_link">
-                                        <li><a href="https://www.notion.so/highmania/Project-1f3450a5a88243a994953698d984f453?pvs=4"
-                                                target="_blank">기획</a></li>
-                                        <li><a href="" target="_blank">XD(와이어프레임,프로토타입)</a></li>
-                                        <li><a href="http://highmania.github.io/portfolio/" target="_blank">리디자인</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                <ul class="portfolio_list">
+                    <li class="portfolio_box">
+                        <div class="Thumbnail">
+                            <img src="./images/orion.jpg" alt="오리온사이트이미지">
                         </div>
+                        <ul class="portfolio_info">
+                            <li><span>프로젝트명</span> : 오리온(반응형)</li>
+                            <li><span>작업</span> : 메인페이지</li>
+                            <li><span>Tool</span> : HTML, CSS, JAVASCRIPT, Abobe XD</li>
+                            <li>
+                                <ul class="portfolio_link">
+                                    <li><a href="https://www.notion.so/highmania/Project-1f3450a5a88243a994953698d984f453?pvs=4"
+                                            target="_blank">기획</a></li>
+                                    <li><a href="" target="_blank">XD(와이어프레임,프로토타입)</a></li>
+                                    <li><a href="http://highmania.github.io/portfolio/" target="_blank">리디자인바로가기</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="">
-                        <div class="web_contents">
-                            <div class="w_img">
-                                <img src="project/design/kumho_mockup.jpg" alt="이랜드이츠이미지">
-                            </div>
-                            <ul class="w_info">
-                                <li class="w_name"><span>프로젝트명</span>:이랜드이츠(반응형)</li>
-                                <li><span>메인페이지</span>메인</li>
-                                <li><span>Tool</span>HTML, CSS, JAVASCRIPT</li>
-                                <li>
-                                    <ul class="w_link">
-                                        <li><a href="http://highmania.github.io/portfolio3/" target="_blank">리디자인</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+            </div>
+            <div class="section fotrh portfolio">
+                <h2>Portfolio</h2>
+                <ul class="portfolio_list">
+                    <li class="portfolio_box">
+                        <div class="Thumbnail">
+                            <img src="./images/elandeats.jpg" alt="이랜드이츠이미지">
                         </div>
+                        <ul class="portfolio_info">
+                            <li><span>프로젝트명</span> : 이랜드이츠(반응형)</li>
+                            <li><span>작업</span> : 메인</li>
+                            <li><span>Tool</span> : HTML, CSS, JAVASCRIPT</li>
+                            <li>
+                                <ul class="portfolio_link">
+                                    <li><a href="https://www.elandeat.com/" target="_blank">이전디자인</a>
+                                    </li>
+                                    <li><a href="http://highmania.github.io/portfolio3/" target="_blank">리디자인바로가기</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-            <div class="section forth design">
+            <div class="section fifth design">
                 <h2>Design(SNS/Detail)</h2>
-                <div class="d_bottom">
+                <div class="design_list">
                     <div class="sns">
                         <div class="sns_box sns1">
                             <a href="#">닭가슴살</a>
@@ -192,7 +214,7 @@
                                 <div class="full">
                                     <div class="full_title">
                                         <p>소설책</p>
-                                        <button type="button" class="d_close">X</button>
+                                        <!-- <button type="button" class="d_close">X</button> -->
                                     </div>
                                     <div class="full_img"><img src="project/design/detail_01.jpg" alt=""></div>
                                 </div>
@@ -206,7 +228,7 @@
                                 <div class="full">
                                     <div class="full_title">
                                         <p>선크림</p>
-                                        <button type="button" class="d_close">X</button>
+                                        <!-- <button type="button" class="d_close">X</button> -->
                                     </div>
                                     <div class="full_img"><img src="project/design/detail_02.jpg" alt=""></div>
                                 </div>
@@ -220,7 +242,7 @@
                                 <div class="full">
                                     <div class="full_title">
                                         <p>핸드폰 케이스</p>
-                                        <button type="button" class="d_close">X</button>
+                                        <!-- <button type="button" class="d_close">X</button> -->
                                     </div>
                                     <div class="full_img"><img src="project/design/detail_03.jpg" alt=""></div>
                                 </div>
@@ -234,7 +256,7 @@
                                 <div class="full">
                                     <div class="full_title">
                                         <p>스파오 패딩</p>
-                                        <button type="button" class="d_close">X</button>
+                                        <!-- <button type="button" class="d_close">X</button> -->
                                     </div>
                                     <div class="full_img"><img src="project/design/detail_04.jpg" alt=""></div>
                                 </div>

@@ -45,7 +45,12 @@ nav{
     position: relative;
     position: fixed;
     z-index: 999;
-    background-color: #eee;
+    background:rgba(0,0,0,0.1);
+    transition: all 0.5s; 
+}
+.active{
+    color: #eee;
+    background-color: #222;
 }
 nav .nav_list{
     position: absolute;
@@ -59,76 +64,92 @@ nav .nav_list{
     justify-content: space-between;    
 }
 nav .nav_list li{
-    width: 33%;
-    font-size: 30px;
+    width: 25%;
+    font-size: 20px;
     font-weight: 600;
     line-height: 50px;
     text-align: center;
 }
 nav .nav_list li a:hover{
-    color: brown;
+    color: #add8e6; 
 }
+
+nav .nav_list .dropdown{
+    position: relative;
+}
+  
+nav .nav_list .dropdown ul {
+    position: absolute;
+    top: 50px;
+    width: 100%;  
+    z-index: 1;
+    background-color: rgba(0,0,0,0.1);
+    display: none;
+}
+nav .nav_list .dropdown ul li{
+    width: 100%;
+    text-align: center; 
+ }  
+nav .nav_list .dropdown ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+}
+  
+nav .nav_list .dropdown:hover > ul {
+    display: block;
+}
+  
 /* //header, 메인메뉴 */ 
 /* main */ 
 #fullpage {
     width:100%;
     height:100%;
   }
-
-
+/* Intro */
 .Intro{
     width: 100%;
+    height: auto;
     position: relative;
+}
+.Intro .video_box{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Intro .video_box .video{
+    position: absolute;
+    right: 0;
+    bottom : 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: #eee; 
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
 }
 .Intro .text_box{
     width: 80%;
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 35px;
+    font-weight: 600;
     text-shadow: 2px 2px 10px #222;
     line-height: 60px;
     text-align: center;
     color: #eee;
 }
-.profile h2{
-    font-size: 45px;
-    text-align: center;
-    margin: 30px 0;
-}
-.profile_box{
-    width: 60%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.profile_box .p_left,
-.profile_box .p_middle,
-.profile_box .p_right{
-    width: 33%;
-}
-.profile_box .p_left a{
-    display: inline-block;
-    text-align: center;
-}
-.profile_box .p_middle{
-    text-align: center;
-    
-}
-.profile_box .p_right{
-    text-align: center;
-    
+.Intro .text_box span{
+    color: #add8e6;
 }
 @media (max-width: 1400px) {
     .Intro .video_box {
-      width: 100%;
-      height: auto;
-    }
-    
-    .Intro video {
       width: 100%;
       height: auto;
     }
@@ -137,7 +158,201 @@ nav .nav_list li a:hover{
       text-align: center;
     }
   }
+/* //Intro */
+
+/* profile */
+.profile h2{
+    font-size: 45px;
+    text-align: center;
+    color: #222;
+    margin: 30px 0;
+}
+.profile_box{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_box .p_left,
+.profile_box .p_right{
+    width: 50%;
+}
+
+.profile_box .p_left a{
+    display: inline-block;
+    text-align: left; 
+}
+.profile_box .p_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+.profile_box .p_right h3{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: #1E445B;
+    margin: 20px 0;
+}
+.profile_box .p_right span{
+    color: #1E445B;
+    font-weight: 700;
+}
+.profile_box .p_right .info_box{
+    width: 100%;
+    text-align: left; 
+}
+.profile_box .p_right .info_box p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #577C93;  
+}
+.profile_box .p_right .info_box .hashtag{
+    color: #e0a36a;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+}
+.profile_box .p_right .info_box .introduce{
+    font-size: 20px;
+    text-align: center;
+}
+
+.profile_box .p_right .skill_box{
+    width: 100%;
+}
+.profile_box .p_right .skill_box ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+}
+.profile_box .p_right .skill_box ul li{
+    width: 15%;
+    position: relative;
+    padding: 30px 5px;
+    margin: 5px;
+}
+.profile_box .p_right .skill_box ul li img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: #eee; 
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+@media (max-width: 1400px) {
+    .profile_box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+  }
+/* //profile */
+
+/* portfolio */
+.portfolio{
+    width: 100%;
+    position: relative;
+}
+.portfolio h2{
+    font-size: 45px;
+    color: #222;
+    text-align: center;
+    margin: 30px 0;
+}
+.portfolio .portfolio_list{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.portfolio .portfolio_list .portfolio_box{
+    max-width: 1400px;
+    max-height: 600px;
+    padding: 20px;
+    margin: 20px;
+    color: #222;
+    background-color: #eee;
+    box-shadow: 2px 2px 10px #808080;
+}
+.portfolio .portfolio_list .Thumbnail img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.portfolio .portfolio_list .portfolio_info>li{
+    font-size: 16px;
+    line-height: 25px;
+}
+.portfolio .portfolio_list .portfolio_info>li span{
+    font-weight: 700;
+}
+
+.portfolio .portfolio_list .portfolio_info .portfolio_link>li{
+    font-weight: 700;
+    margin: 10px 0;
+    color: #808080;
+}
+.portfolio .portfolio_list .portfolio_info .portfolio_link>li:hover{
+    color: #add8e6;
+}
+/* //portfolio */
+
+/* design */
+.design{
+    width: 100%;
+    position: relative;
+}
+.design h2{
+    font-size: 45px;
+    color: #222;
+    text-align: center;
+    margin: 30px 0;
+}
+.design .design_list{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.design .design_list .sns{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #222;
+}
+.design .design_list .detail{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #222;
+}
+/* //design */
+
 /* //main */
+
 /* footer */
 
 /* //footer */
