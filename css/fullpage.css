@@ -274,7 +274,7 @@ html.fp-enabled,
 
 /* Customize website's scrollbar like Mac OS
 Not supports in Firefox and IE */
-.fp-scroll-mac .fp-overflow::-webkit-scrollbar {
+/* .fp-scroll-mac .fp-overflow::-webkit-scrollbar {
     background-color: transparent;
     width: 9px;
 }
@@ -307,4 +307,4 @@ Not supports in Firefox and IE */
 }
 .fp-noscroll .fp-overflow{
     overflow: hidden;
-}
+} */
