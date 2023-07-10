@@ -200,7 +200,6 @@ nav .nav_list .dropdown:hover > ul {
     display: block;
     margin: auto;
     max-width: 200px;
-    opacity: 0.1;
 }
 
 .profile_box .p_left button{
