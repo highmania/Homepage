@@ -401,33 +401,90 @@ nav .nav_list .dropdown:hover > ul {
     color: #222;
     font-family: 'Mark-Pro', sans-serif;
     text-align: center;
-    margin: 15px auto;
+    margin-bottom: 50px;
 }
 .design .design_list{
     width: 70%;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-.design .design_list .sns{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #222;
+
+.design .design_list .design_thumb{
+    width: 30%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #808080;
+    margin-bottom: 15px;
 }
-.design .design_list .detail{
+.design .design_list .design_thumb img{
     width: 100%;
-    margin: auto;
+}
+.design .design_list .design_thumb:hover{
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
+.popup_bg1,
+.popup_bg2,
+.popup_bg3{
+    background: #000000dd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+.popup_bg1 .container,
+.popup_bg2 .container,
+.popup_bg3 .container {
+    position: fixed;
+    top: 50px;
+    left: 25%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
+}
+.popup_bg .container1,
+.popup_bg .container2,
+.popup_bg .container3{
+    max-width: 900px;
+}
+.popup_bg .container .title_btn {
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    color: #222;
+    justify-content: space-between;
+}
+.popup_bg .container .title_btn .title {
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.popup_bg .container .title_btn .title span:nth-child(1) {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #add8e6;
+}
+.popup_bg .container .title_btn .close_btn {
+    position: fixed;
+    right: 25%;
+    top: 50px;
+    font-size: 20px;
+    color: #fff;
+}
+.popup_bg .container .img_container {
+    width: 100%;
+    height: 80vh;
+    overflow-y:scroll;
+}
+.popup_bg .container .img_container img {
+    width: 100%;
 }
 /* //design */
 
