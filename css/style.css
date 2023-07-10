@@ -200,6 +200,7 @@ nav .nav_list .dropdown:hover > ul {
     display: block;
     margin: auto;
     max-width: 200px;
+    /* opacity: 0.1; */
 }
 
 .profile_box .p_left button{
@@ -407,12 +408,13 @@ nav .nav_list .dropdown:hover > ul {
     margin: auto;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .design .design_list .design_thumb{
     width: 30%;
-    height: 450px;
+    height: 250px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 2px 2px 10px #808080;
@@ -425,9 +427,8 @@ nav .nav_list .dropdown:hover > ul {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-.popup_bg1,
-.popup_bg2,
-.popup_bg3{
+.popup_bg1, .popup_bg2, .popup_bg3,
+.popup_bg4, .popup_bg5, .popup_bg6{
     background: #000000dd;
     position: absolute;
     top: 0;
@@ -439,7 +440,10 @@ nav .nav_list .dropdown:hover > ul {
 }
 .popup_bg1 .container,
 .popup_bg2 .container,
-.popup_bg3 .container {
+.popup_bg3 .container,
+.popup_bg4 .container,
+.popup_bg5 .container,
+.popup_bg6 .container {
     position: fixed;
     top: 50px;
     left: 25%;
@@ -449,7 +453,10 @@ nav .nav_list .dropdown:hover > ul {
 }
 .popup_bg .container1,
 .popup_bg .container2,
-.popup_bg .container3{
+.popup_bg .container3,
+.popup_bg .container4,
+.popup_bg .container5,
+.popup_bg .container6{
     max-width: 900px;
 }
 .popup_bg .container .title_btn {
