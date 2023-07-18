@@ -13,6 +13,7 @@ $(document).ready(function() {
     slideSelector:'.slide',
     slidesNavigation: false,
     responsiveSlides : true,
+    responsiveWidth: 900,
   });
 });
 $(function(){
@@ -37,7 +38,7 @@ $(function(){
   );
 });
 $(function() {
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 6; i++) {
     $(`.design_thumb${i}`).click(function() {
       $(`.popup_bg${i}, .container${i}`).show();
     });
