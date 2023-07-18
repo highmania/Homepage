@@ -48,6 +48,11 @@ nav{
     background:rgba(0,0,0,0.1);
     transition: all 0.5s; 
 }
+nav:hover{
+    color: #eee;
+    background:#222;
+    transition: all 0.5s; 
+}
 .active{
     color: #eee;
     background-color: #222;
@@ -65,7 +70,7 @@ nav .nav_list{
 }
 nav .nav_list li{
     width: 25%;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 50px;
     text-align: center;
@@ -92,7 +97,7 @@ nav .nav_list .dropdown ul li{
     text-align: center; 
  }  
 nav .nav_list .dropdown ul li a {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     padding: 10px;
 }
@@ -106,7 +111,7 @@ nav .nav_list .dropdown:hover > ul {
     }
     nav .nav_list li{
         width: 25%;
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 700;
         line-height: 50px;
         text-align: center;
@@ -152,9 +157,9 @@ nav .nav_list .dropdown:hover > ul {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 600;
-    text-shadow: 2px 2px 10px #222;
+    text-shadow: 2px 2px 2px #444;
     line-height: 100px;
     text-align: center;
     color: #fff;
@@ -165,7 +170,7 @@ nav .nav_list .dropdown:hover > ul {
 @media (max-width: 900px) {    
     .Intro .text_box {
         top: 50%;
-        font-size: 35px;
+        font-size: 3.5rem;
         line-height: 60px;
     } 
   }
@@ -173,7 +178,7 @@ nav .nav_list .dropdown:hover > ul {
 
 /* profile */
 .profile h2{
-    font-size: 45px;
+    font-size: 4.5rem;
     text-align: center;
     font-weight: bold;
     font-family: 'Mark-Pro', sans-serif;
@@ -186,7 +191,7 @@ nav .nav_list .dropdown:hover > ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 40px;
+    padding: 5% 6%;
     border: 5px solid #1E445B;
     box-shadow: 5px 5px 10px #666;
 }
@@ -200,7 +205,6 @@ nav .nav_list .dropdown:hover > ul {
     display: block;
     margin: auto;
     max-width: 200px;
-    /* opacity: 0.1; */
 }
 
 .profile_box .p_left button{
@@ -213,7 +217,7 @@ nav .nav_list .dropdown:hover > ul {
     text-align: center;
     color: #1E445B;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 20px;
     font-weight: 600;
 }
@@ -241,24 +245,25 @@ nav .nav_list .dropdown:hover > ul {
     text-align: left; 
 }
 .profile_box .p_right .info_box p{
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 30px;
-    color: #577C93;  
+    color: #577C93;
+      
 }
 .profile_box .p_right .info_box .hashtag{
     color: #e0a36a;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     line-height: 35px;
     text-align: center;
 }
 .profile_box .p_right .info_box .introduce{
-    font-size: 20px;
+    font-size: 2rem;
     text-align: left;
 }
 .profile_box .p_right .info_box h3,
 .profile_box .p_right .skill_box h3{
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 30px;
     font-weight: 700;
     color : #1E445B;
@@ -297,7 +302,7 @@ nav .nav_list .dropdown:hover > ul {
 
 @media (max-width: 1200px) {
     .profile_box {
-        width: 80%;
+        width: 60%;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -308,30 +313,42 @@ nav .nav_list .dropdown:hover > ul {
         width: 100%;
     }
     .profile_box .p_left a img{
-        max-width: 150px;
+        max-width: 100px;
     }
 
     .profile_box .p_left button{
         width: 80px;
         height: 25px;
-        font-size: 15px;
+        font-size: 1.2rem;
     }
     .profile_box .p_right .info_box p{
-        font-size: 15px;
+        font-size: 1rem;
+        line-height: 1.5rem;
         font-weight: 600;
         margin: 10px 0;
+        text-align: center; 
     }
     .profile_box .p_right .info_box .hashtag{
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1.3rem;
+        line-height: 2rem;
     }
     .profile_box .p_right .info_box .introduce{
-        font-size: 16px;
-        line-height: 25px;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
         text-align: center;
     }
     .profile_box .p_right .skill_box ul{
         flex-wrap: wrap;
+    }
+    .profile_box .p_right .skill_box ul li{
+        width: 30px;
+        height: 30px;
+    }
+    .profile_box .p_right .skill_box ul li img{
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        margin: 2px;
     }
   }
 /* //profile */
@@ -342,7 +359,7 @@ nav .nav_list .dropdown:hover > ul {
     position: relative;
 }
 .portfolio h2{
-    font-size: 45px;
+    font-size: 4.5rem;
     color: #222;
     font-weight: bold;
     font-family: 'Mark-Pro', sans-serif;
@@ -373,7 +390,7 @@ nav .nav_list .dropdown:hover > ul {
     margin-bottom: 15px;
 }
 .portfolio .portfolio_list .portfolio_info>li{
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 25px;
 }
 .portfolio .portfolio_list .portfolio_info>li span{
@@ -388,6 +405,11 @@ nav .nav_list .dropdown:hover > ul {
 .portfolio .portfolio_list .portfolio_info .portfolio_link>li:hover{
     color: #add8e6;
 }
+@media (max-width: 900px) {
+    .portfolio h2{
+        font-size: 3rem;
+    }
+}
 /* //portfolio */
 
 /* design */
@@ -396,7 +418,7 @@ nav .nav_list .dropdown:hover > ul {
     position: relative;
 }
 .design h2{
-    font-size: 45px;
+    font-size: 4.5rem;
     font-weight: bold;
     color: #222;
     font-family: 'Mark-Pro', sans-serif;
@@ -407,8 +429,8 @@ nav .nav_list .dropdown:hover > ul {
     width: 70%;
     margin: auto;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -419,9 +441,11 @@ nav .nav_list .dropdown:hover > ul {
     border-radius: 10px;
     box-shadow: 2px 2px 10px #808080;
     margin-bottom: 15px;
+    display: flex;
 }
 .design .design_list .design_thumb img{
     width: 100%;
+    object-fit: cover;
 }
 .design .design_list .design_thumb:hover{
     transform: scale(0.95);
@@ -466,14 +490,14 @@ nav .nav_list .dropdown:hover > ul {
 }
 .popup_bg .container .title_btn .title {
     color: #fff;
-    font-size: 20px;
+    font-size: 2rem;
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
 }
 .popup_bg .container .title_btn .title span:nth-child(1) {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 20px;
     color: #add8e6;
 }
@@ -481,7 +505,7 @@ nav .nav_list .dropdown:hover > ul {
     position: fixed;
     right: 25%;
     top: 50px;
-    font-size: 20px;
+    font-size: 2rem;
     color: #fff;
 }
 .popup_bg .container .img_container {
@@ -491,6 +515,28 @@ nav .nav_list .dropdown:hover > ul {
 }
 .popup_bg .container .img_container img {
     width: 100%;
+}
+@media (max-width: 900px) {
+    .design h2{
+        font-size: 3rem;
+    }
+    .design .design_list .design_thumb{
+        width: 30%;
+        height: 20vh;
+        
+    } 
+    .design .design_list .design_thumb img{
+        width: 100%;
+    }
+    
+    .popup_bg .container1,
+    .popup_bg .container2,
+    .popup_bg .container3,
+    .popup_bg .container4,
+    .popup_bg .container5,
+    .popup_bg .container6{
+        max-width: 50%;
+    }
 }
 /* //design */
 
@@ -504,7 +550,7 @@ footer{
     height: 50px;
     background-color: #222;
     color: #eee;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 50px;
     text-align: center;
