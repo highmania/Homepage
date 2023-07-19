@@ -207,29 +207,6 @@ nav .nav_list .dropdown:hover > ul {
     max-width: 200px;
 }
 
-.profile_box .p_left button{
-    display: block;
-    margin: 10px auto;
-    width: 120px;
-    height: 30px;
-    border: 2px solid #1E445B;
-    background-color: #fff;
-    text-align: center;
-    color: #1E445B;
-    border-radius: 10px;
-    font-size: 2rem;
-    line-height: 20px;
-    font-weight: 600;
-}
-.profile_box .p_left button:hover{
-    border: 2px solid #add8e6;
-    background-color: #add8e6;
-    color: #fff; 
-    text-shadow: 2px 2px 5px #222;
-    cursor : pointer;
-    transition: all 0.5s;
-}
-
 .profile_box .p_right{
     display: flex;
     flex-direction: column;
@@ -314,12 +291,6 @@ nav .nav_list .dropdown:hover > ul {
     }
     .profile_box .p_left a img{
         max-width: 100px;
-    }
-
-    .profile_box .p_left button{
-        width: 80px;
-        height: 25px;
-        font-size: 1.2rem;
     }
     .profile_box .p_right .info_box p{
         font-size: 1rem;
