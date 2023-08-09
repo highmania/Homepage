@@ -2,9 +2,11 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/mark-pro');
+@import url('https://fonts.cdnfonts.com/css/multicolore-2');
 /* font-family : 'Noto sans KR', sans-serif;
    font-family: 'Roboto', sans-serif;
    font-family: 'Mark-Pro', sans-serif;
+   font-family: 'Multicolore', sans-serif;
  */
 
 li {
@@ -74,7 +76,7 @@ nav .nav_list li{
     font-weight: 600;
     line-height: 50px;
     text-align: center;
-    font-family: 'Mark-Pro', sans-serif;
+    font-family: 'Multicolore', sans-serif;
 }
 nav .nav_list li a:hover{
     color: #add8e6; 
@@ -115,7 +117,7 @@ nav .nav_list .dropdown:hover > ul {
         font-weight: 700;
         line-height: 50px;
         text-align: center;
-        font-family: 'Mark-Pro', sans-serif;
+        font-family: 'Multicolore', sans-serif;
     }
 }
 /* //header, 메인메뉴 */ 
@@ -155,13 +157,12 @@ nav .nav_list .dropdown:hover > ul {
     width: 80%;
     position: absolute;
     top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20%;
     font-size: 5rem;
     font-weight: 600;
     text-shadow: 2px 2px 2px #444;
     line-height: 100px;
-    text-align: center;
+    text-align: left;
     color: #fff;
 }
 .Intro .text_box span{
@@ -169,7 +170,7 @@ nav .nav_list .dropdown:hover > ul {
 }
 @media (max-width: 900px) {    
     .Intro .text_box {
-        top: 50%;
+        top: 30%;
         font-size: 3.5rem;
         line-height: 60px;
     } 
@@ -181,19 +182,19 @@ nav .nav_list .dropdown:hover > ul {
     font-size: 4.5rem;
     text-align: center;
     font-weight: bold;
-    font-family: 'Mark-Pro', sans-serif;
-    color: #222;
-    margin: 15px auto;
+    font-family: 'Multicolore', sans-serif;
+    color: #444961;
+    margin: 30px auto;
 }
 .profile_box{
-    width: 60%;
-    margin: auto;
+    width: 50%;
+    margin: 10px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5% 6%;
     border: 5px solid #1E445B;
-    box-shadow: 5px 5px 10px #666;
+    box-shadow: 5px 5px 8px #666;
 }
 
 .profile_box .p_left,
@@ -225,8 +226,11 @@ nav .nav_list .dropdown:hover > ul {
 .profile_box .p_right .info_box p{
     font-size: 1.8rem;
     line-height: 30px;
-    color: #577C93;
-      
+    color: #577C93; 
+}
+.profile_box .p_right .info_box ul{
+    display: flex;
+    justify-content: space-evenly;
 }
 .profile_box .p_right .info_box .hashtag{
     color: #e0a36a;
@@ -236,7 +240,8 @@ nav .nav_list .dropdown:hover > ul {
     text-align: center;
 }
 .profile_box .p_right .info_box .introduce{
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
     text-align: left;
 }
 .profile_box .p_right .info_box h3,
@@ -246,7 +251,7 @@ nav .nav_list .dropdown:hover > ul {
     font-weight: 700;
     color : #1E445B;
     text-align: center;
-    font-family: 'Mark-Pro', sans-serif;
+    font-family: 'Multicolore', sans-serif;
     margin-bottom: 10px;
 }
 
@@ -332,9 +337,9 @@ nav .nav_list .dropdown:hover > ul {
 }
 .portfolio h2{
     font-size: 4.5rem;
-    color: #222;
+    color: #444961;
     font-weight: bold;
-    font-family: 'Mark-Pro', sans-serif;
+    font-family: 'Multicolore', sans-serif;
     text-align: center;
     margin: 15px auto;
 }
@@ -392,8 +397,8 @@ nav .nav_list .dropdown:hover > ul {
 .design h2{
     font-size: 4.5rem;
     font-weight: bold;
-    color: #222;
-    font-family: 'Mark-Pro', sans-serif;
+    color: #444961;
+    font-family: 'Multicolore', sans-serif;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -439,7 +444,7 @@ nav .nav_list .dropdown:hover > ul {
     font-size: 2.5rem;
     font-weight: bold;
     color: #222;
-    font-family: 'Mark-Pro', sans-serif;
+    font-family: 'Multicolore', sans-serif;
     text-align: center;
     margin: 15px 0px;
 }
@@ -550,7 +555,7 @@ footer{
     font-weight: 700;
     line-height: 50px;
     text-align: center;
-    font-family: 'Mark-Pro', sans-serif;
+    font-family: 'Multicolore', sans-serif;
 }
 .fp-watermark{
     display: none;
