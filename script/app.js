@@ -15,7 +15,6 @@ $(document).ready(function() {
     responsiveSlides : true,
     responsiveWidth: 900,
   });
-  $.fn.fullpage.setAllowScrolling(false);
 });
 $(function(){
   $('[class^="design_thumb"]').click(function(){
