@@ -13,7 +13,7 @@ $(function() {
       slideSelector:'.slide',
       slidesNavigation: false,
       responsiveSlides : true,
-      responsiveWidth: 900,
+      responsiveWidth: 0,
     });
 
    // Code for design_thumb
