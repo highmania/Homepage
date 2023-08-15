@@ -96,8 +96,8 @@ nav .nav_list .dropdown ul {
 }
 nav .nav_list .dropdown ul li{
     width: 100%;
-    text-align: center; 
- }  
+    text-align: center;    
+}  
 nav .nav_list .dropdown ul li a {
     font-size: 1.6rem;
     font-weight: 700;
@@ -113,11 +113,14 @@ nav .nav_list .dropdown:hover > ul {
     }
     nav .nav_list li{
         width: 25%;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 50px;
         text-align: center;
         font-family: 'Multicolore', sans-serif;
+    }
+    nav .nav_list .dropdown ul li a{
+        font-size: 1.3rem;
     }
 }
 /* //header, 메인메뉴 */ 
@@ -153,7 +156,7 @@ nav .nav_list .dropdown:hover > ul {
     min-height: 100vh;
     object-fit: cover;
 }
-.Intro .text_box{
+.Intro #Introtext{
     width: 80%;
     position: absolute;
     top: 25%;
@@ -165,19 +168,22 @@ nav .nav_list .dropdown:hover > ul {
     text-align: left;
     color: #fff;
 }
-.Intro .text_box span{
+.Intro #Introtext span{
     color: #add8e6;
 }
 @media (max-width: 900px) {    
-    .Intro .text_box {
-        top: 30%;
-        font-size: 3.5rem;
+    .Intro #Introtext {
+        font-size: 2.5rem;
         line-height: 60px;
     } 
   }
 /* //Intro */
 
 /* profile */
+.profile{
+    width: 100%;
+    height: auto;
+}
 .profile h2{
     font-size: 4.5rem;
     text-align: center;
@@ -186,146 +192,177 @@ nav .nav_list .dropdown:hover > ul {
     color: #444961;
     margin: 30px auto;
 }
-.profile_box{
-    width: 50%;
-    margin: 10px auto;
+.profile_wrap{
+    width: 70%;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 5% 6%;
-    border: 5px solid #1E445B;
-    box-shadow: 5px 5px 8px #666;
+    justify-content: space-evenly;
 }
 
-.profile_box .p_left,
-.profile_box .p_right{
-    width: 50%;
+.profile_wrap h3{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color : #1E445B;
+    text-align: center;
+    font-family: 'Multicolore', sans-serif;
+}
+.profile_wrap .p_left,
+.profile_wrap .p_right,
+.profile_wrap .skill_box{
+    width: 33%;
+    padding: 2%;
 }
 
-.profile_box .p_left a img{
+.profile_wrap .p_left a img{
     display: block;
+    max-width: 150px;
+    box-shadow: 2px 2px 8px #666;
     margin: auto;
-    max-width: 200px;
-    border: 2px solid #add8e6;
+    margin-bottom: 20px;
 }
-
-.profile_box .p_right{
+.profile_wrap .p_right{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: right;
 }
-.profile_box .p_right span{
+.profile_wrap .p_left span,
+.profile_wrap .p_right span{
+    font-size: 2rem;
     color: #1E445B;
     font-weight: 700;
 }
-.profile_box .p_right .info_box{
+.profile_wrap .p_left .info_box,
+.profile_wrap .p_right .info_box{
     width: 100%;
-    text-align: left; 
-}
-.profile_box .p_right .info_box p{
     font-size: 1.8rem;
-    line-height: 30px;
+    line-height: 3rem;
     color: #577C93; 
+    text-align: left;
+    margin-bottom: 1.5rem; 
 }
-.profile_box .p_right .info_box ul{
-    display: flex;
-    justify-content: space-evenly;
-}
-.profile_box .p_right .info_box .hashtag{
-    color: #e0a36a;
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 35px;
-    text-align: center;
-}
-.profile_box .p_right .info_box .introduce{
+.profile_wrap .p_right .info_box p.introduce{
     font-size: 1.7rem;
     font-weight: 700;
     text-align: left;
+    color: #577C93; 
 }
-.profile_box .p_right .info_box h3,
-.profile_box .p_right .skill_box h3{
-    font-size: 2rem;
-    line-height: 30px;
+.profile_wrap .p_right .info_box p.hashtag{
+    font-size: 2.4rem;
+    line-height: 3.5rem;
     font-weight: 700;
-    color : #1E445B;
     text-align: center;
-    font-family: 'Multicolore', sans-serif;
-    margin-bottom: 10px;
+    color: #e0a36a;
 }
 
-.profile_box .p_right .skill_box{
-    width: 100%;
-}
-.profile_box .p_right .skill_box ul{
+.profile_wrap .skill_box ul.skill_icon{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-.profile_box .p_right .skill_box ul li{
-    width: 50px;
-    height: 50px;
+.profile_wrap .skill_box ul.skill_icon li.icon_box{
     position: relative;
-    padding: 5px;
+    width: 35%;
+    height: auto;
     margin: 5px;
+    display: flex;
+    flex-direction: column;
 }
-.profile_box .p_right .skill_box ul li img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
+.profile_wrap .skill_box ul.skill_icon li.icon_box img{
+    min-width: 50px;
     height: 50px;
+    margin: 10px auto;
     background-size: 100%;
     background-position: center;
-    background-size: contain;
     object-fit: cover; 
 }
-
+.profile_wrap .skill_box ul.skill_icon li.icon_box p.name{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color : #222;
+    text-align: center;
+    font-family: 'Multicolore', sans-serif;
+    margin-bottom: 0.5rem;
+}
+.profile_wrap .skill_box ul.skill_icon li.icon_box p.level{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile_wrap .skill_box ul.skill_icon li.icon_box p.level span{
+    width: 10px;
+    height: 5px;
+    border-radius: 20%;
+}
+.profile_wrap .skill_box ul.skill_icon li.icon_box p.level span.fill{
+    background-color:#e0a36a;
+}
+.profile_wrap .skill_box ul.skill_icon li.icon_box p.level span.empty{
+    background-color: #1E445B;
+}
 @media (max-width: 1200px) {
-    .profile_box {
-        width: 60%;
+    .profile h2{
+        font-size: 3rem;
+    }
+    .profile_wrap {
+        width: 80%;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
     
-    .profile_box .p_left,
-    .profile_box .p_right{
+    .profile_wrap .p_left,
+    .profile_wrap .p_right,
+    .profile_wrap .skill_box{
         width: 100%;
     }
-    .profile_box .p_left a img{
-        max-width: 100px;
+    .profile_wrap .p_left a img{
+        max-width: 120px;
     }
-    .profile_box .p_right .info_box p{
-        font-size: 1rem;
-        line-height: 1.5rem;
+    .profile_wrap .p_left .info_box{
+        text-align: center; 
+    }
+    .profile_wrap .p_right .info_box p{
+        font-size: 1.5rem;
+        line-height: 1.7rem;
         font-weight: 600;
         margin: 10px 0;
         text-align: center; 
     }
-    .profile_box .p_right .info_box .hashtag{
-        font-size: 1.3rem;
+    .profile_wrap .p_left span,
+    .profile_wrap .p_right span{
+        font-size: 1.7rem;
+    }
+    .profile_wrap .p_right .info_box p.hashtag{
+        font-size: 1.7rem;
         line-height: 2rem;
     }
-    .profile_box .p_right .info_box .introduce{
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+    .profile_wrap .p_right .info_box p.introduce{
+        font-size: 1.5rem;
+        line-height: 1.7rem;
         text-align: center;
     }
-    .profile_box .p_right .skill_box ul{
-        flex-wrap: wrap;
+    .profile_wrap .skill_box ul.skill_icon li.icon_box{
+        width: 20%;
     }
-    .profile_box .p_right .skill_box ul li{
-        width: 30px;
+    .profile_wrap .skill_box ul.skill_icon li.icon_box img{
+        min-width: 30px;
         height: 30px;
     }
-    .profile_box .p_right .skill_box ul li img{
-        width: 30px;
-        height: 30px;
-        padding: 2px;
-        margin: 2px;
+    .profile_wrap .skill_box ul.skill_icon li.icon_box p.name{
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+
+    }
+    .profile_wrap .skill_box ul.skill_icon li.icon_box p.level span{
+        width: 5px;
+        height: 5px;
     }
   }
 /* //profile */
@@ -358,12 +395,11 @@ nav .nav_list .dropdown:hover > ul {
     padding: 20px;
     margin: 20px;
     color: #222;
-    background-color: #fff;
-    box-shadow: 2px 2px 10px #808080;
 }
 .portfolio .portfolio_list .Thumbnail img{
     width: 100%;
     height: auto;
+    box-shadow: 3px 3px 10px #222;
     margin-bottom: 15px;
 }
 .portfolio .portfolio_list .portfolio_info>li{
@@ -376,17 +412,39 @@ nav .nav_list .dropdown:hover > ul {
 
 .portfolio .portfolio_list .portfolio_info .portfolio_link>li{
     font-weight: 700;
-    margin: 10px 0;
-    color: #808080;
+    margin: 10px auto;
+    width: 250px;
+    border: 2px solid #1E445B;
+    text-align: center;
+    background: #fff;
+    color: #1E445B;
 }
+
 .portfolio .portfolio_list .portfolio_info .portfolio_link>li:hover{
     color: #add8e6;
+    background-color: #1E445B;
+    transition: all 0.5s;
 }
+
 @media (max-width: 900px) {
     .portfolio h2{
         font-size: 3rem;
     }
+    .portfolio .portfolio_list{
+        width: 85%;        
+    }
+    .portfolio .portfolio_list .portfolio_info>li{
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 25px;
+    }
+    .portfolio .portfolio_list .Thumbnail img{
+        height: 30vh;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
 }
+
 /* //portfolio */
 
 /* design */
@@ -415,8 +473,9 @@ nav .nav_list .dropdown:hover > ul {
     width: 20%;
     height: 250px;
     overflow: hidden;
-    border: 2px solid #add8e6;
+    box-shadow: 3px 3px 10px #222;
     margin-bottom: 15px;
+
     display: flex;
 }
 .design .design_list .design_thumb img{
@@ -436,20 +495,18 @@ nav .nav_list .dropdown:hover > ul {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #fff;
-    box-shadow: 2px 2px 10px #808080;
     margin-bottom: 10px;
 }
 .design .design_list h3{
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #222;
-    font-family: 'Multicolore', sans-serif;
+    line-height: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color : #1E445B;
     text-align: center;
-    margin: 15px 0px;
+    font-family: 'Multicolore', sans-serif;
 }
-.popup_bg1, .popup_bg2, .popup_bg3,
-.popup_bg4, .popup_bg5, .popup_bg6, .popup_bg7{
+.popup_bg{
     background: #000000dd;
     position: absolute;
     top: 0;
@@ -459,27 +516,13 @@ nav .nav_list .dropdown:hover > ul {
     z-index: 999;
     display: none;
 }
-.popup_bg1 .container,
-.popup_bg2 .container,
-.popup_bg3 .container,
-.popup_bg4 .container,
-.popup_bg5 .container,
-.popup_bg6 .container,
-.popup_bg7 .container {
-    position: fixed;
+.popup_bg .container{
+    position: absolute;
     top: 50px;
     left: 25%;
     width: 100%;
     display: flex;
     flex-flow: column;
-}
-.popup_bg .container1,
-.popup_bg .container2,
-.popup_bg .container3,
-.popup_bg .container4,
-.popup_bg .container5,
-.popup_bg .container6,
-.popup_bg .container7 {
     max-width: 900px;
 }
 .popup_bg .container .title_btn {
@@ -501,9 +544,9 @@ nav .nav_list .dropdown:hover > ul {
     color: #add8e6;
 }
 .popup_bg .container .title_btn .close_btn {
-    position: fixed;
-    right: 25%;
-    top: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     font-size: 2rem;
     color: #fff;
 }
@@ -518,46 +561,63 @@ nav .nav_list .dropdown:hover > ul {
 @media (max-width: 900px) {
     .design h2{
         font-size: 3rem;
+        margin-top: 5rem;
+    }
+    .design .design_list{
+        width: 85%;
+
     }
     .design .design_list .design_thumb{
-        width: 30%;
+        width: 20%;
         height: 20vh;
-        
     } 
     .design .design_list .design_thumb img{
         width: 100%;
     }
-    
-    .popup_bg .container1,
-    .popup_bg .container2,
-    .popup_bg .container3,
-    .popup_bg .container4,
-    .popup_bg .container5,
-    .popup_bg .container6,
-    .popup_bg .container7
-    {
-        max-width: 50%;
+
+    .popup_bg .container{
+        left: 10%;
+        max-width: 80%;
+    }
+    .popup_bg .container .title_btn .title {
+        font-size: 1.2rem;
+    }
+    .popup_bg .container .title_btn .title span:nth-child(1) {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .popup_bg .container .title_btn .close_btn {
+        font-size: 1.5rem;
     }
 }
 /* //design */
-
-/* //main */
-
 /* footer */
 footer{
-    position: absolute;
-    bottom : 0px;
     width: 100%;
-    height: 50px;
-    background-color: #222;
+    height: 120px;
+    padding: 15px 0px;
+    background-color: #1E445B;
     color: #eee;
     font-size: 2rem;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 40px;
     text-align: center;
     font-family: 'Multicolore', sans-serif;
 }
 .fp-watermark{
     display: none;
 }
+
+@media (max-width: 900px) {
+    
+    footer{
+    height: 80px;
+    font-size: 1.1rem;
+    }
+}
 /* //footer */
+#fp-nav ul li:last-child, 
+.fp-slidesNav ul li:last-child{
+    display: none;
+}
+/* //main */
