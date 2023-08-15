@@ -1,7 +1,7 @@
 $(document).ready(function() {
   //fullpage option
   $('#fullpage').fullpage({
-    autoScrolling: false,
+    autoScrolling: true,
     scrollHorizontally: true,
     lockAnchors : false,
     anchors:['first', 'second', 'third', 'forth' ,'fifth', 'sixth', 'seventh'],
@@ -16,6 +16,25 @@ $(document).ready(function() {
     responsiveWidth: 900,
   });
 });
+$(function(){
+  $('[class^="design_thumb"]').click(function(){
+    let num = parseInt($(this).attr('class').match(/\d+/));
+    $('.popup_bg' + num).stop().fadeIn();
+    $('body').on('scroll touchmove mousewheel', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
+  });
+
+  $('.close_btn').click(function(){
+    let num = parseInt($(this).closest('.popup_bg').attr('class').match(/\d+/));
+    $('.popup_bg' + num).stop().fadeOut();
+    $('body').off('scroll touchmove mousewheel');
+  });
+});
+
+
 $(function(){
     $(document).on("scroll", function() {
       let scrollTop = $(window).scrollTop();
@@ -37,6 +56,18 @@ $(function(){
     }
   );
 });
+
+document.addEventListener('DOMContentLoaded', () =>{
+  new TypeIt("#Introtext", {
+    strings: [""],
+    speed: 50,
+    deleteSpeed: 30,
+    loop : true
+  })
+  .pause(2000)
+  .go();
+});
+
 $(function() {
   for (let i = 1; i <= 7; i++) {
     $(`.design_thumb${i}`).click(function() {
