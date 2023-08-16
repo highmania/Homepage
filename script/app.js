@@ -1,8 +1,18 @@
 $(function() {
-  // Fullpage option
-    $('#fullpage').fullpage({
+    $(document).on("scroll", function() {
+    //...scroll event code...
+    let scrollTop = $(window).scrollTop();
+      if (scrollTop > 100) {
+        $("nav, .dropdown>ul li").addClass("nav_active");
+      } else {
+        $("nav, .dropdown>ul li").removeClass("nav_active");
+      }
+    });
+    
+    // Fullpage option
+    new $('#fullpage').fullpage({
       autoScrolling: true,
-      scrollHorizontally: true,
+      scrollHorizontally: false,
       lockAnchors : false,
       anchors:['first', 'second', 'third', 'forth' ,'fifth', 'sixth', 'seventh'],
       navigation : true,
@@ -13,7 +23,7 @@ $(function() {
       slideSelector:'.slide',
       slidesNavigation: false,
       responsiveSlides : true,
-      responsiveWidth: 0,
+      responsiveWidth: 0
     });
 
    // Code for design_thumb
@@ -34,15 +44,7 @@ $(function() {
     });
 
   // Scroll event code
-  $(document).on("scroll", function() {
-    //...scroll event code...
-    let scrollTop = $(window).scrollTop();
-      if (scrollTop > 100) {
-        $("nav, .dropdown>ul li").addClass("active");
-      } else {
-        $("nav, .dropdown>ul li").removeClass("active");
-      }
-    });
+  
 
   // Dropdown hover
   $('.dropdown').hover(
