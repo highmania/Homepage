@@ -235,7 +235,7 @@ nav .nav_list .dropdown:hover > ul {
     padding: 2%;
 }
 
-.profile_wrap .p_left a img{
+.profile_wrap .p_left img{
     display: block;
     max-width: 150px;
     box-shadow: 2px 2px 8px #666;
@@ -421,6 +421,10 @@ nav .nav_list .dropdown:hover > ul {
     box-shadow: 3px 3px 10px #222;
     margin-bottom: 15px;
 }
+.portfolio .portfolio_list .Thumbnail img:hover{
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
 .portfolio .portfolio_list .portfolio_info>li{
     font-size: 1.6rem;
     line-height: 25px;
@@ -503,6 +507,7 @@ nav .nav_list .dropdown:hover > ul {
     object-position: top center;
 }
 .design .design_list .design_thumb:hover{
+    border: 3px solid #e0a36a;
     transform: scale(0.95);
     transition: all 0.5s;
 }
