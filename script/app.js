@@ -1,6 +1,6 @@
 $(function() {
+  //스크롤 이벤트
     $(document).on("scroll", function() {
-    //...scroll event code...
     let scrollTop = $(window).scrollTop();
       if (scrollTop > 100) {
         $("nav, .dropdown>ul li").addClass("nav_active");
@@ -8,16 +8,16 @@ $(function() {
         $("nav, .dropdown>ul li").removeClass("nav_active");
       }
     });
-    
-    // Fullpage option
+
+    //Fullpage 세팅
     new $('#fullpage').fullpage({
       autoScrolling: true,
       scrollHorizontally: false,
       lockAnchors : false,
-      anchors:['first', 'second', 'third', 'forth' ,'fifth', 'sixth', 'seventh'],
+      anchors:['first', 'second', 'third', 'forth' ,'fifth', 'sixth', 'seventh', 'eighth'],
       navigation : true,
       navigationPosition :'right',
-      sectionsColor : ['#eee', '#fff' , '#eee', '#fff' , '#eee', '#fff', '#eee'],
+      sectionsColor : ['#eee', '#fff' , '#eee', '#fff' , '#eee', '#fff', '#eee', '#fff'],
       showActiveTooltip: true,
       sectionSeletor:'.section',
       slideSelector:'.slide',
@@ -26,41 +26,18 @@ $(function() {
       responsiveWidth: 0
     });
 
-   // Code for design_thumb
-  $('[class^="design_thumb"]').click(function() {
-    // ...design_thumb click code...
-      let num = parseInt($(this).attr('class').match(/\d+/));
-      $('.popup_bg' + num).stop().fadeIn();
-      $('body').on('scroll touchmove mousewheel', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      });
-    });
-    $('.close_btn').click(function(){
-      let num = parseInt($(this).closest('.popup_bg').attr('class').match(/\d+/));
-      $('.popup_bg' + num).stop().fadeOut();
-      $('body').off('scroll touchmove mousewheel');
-    });
-
-  // Scroll event code
-  
-
-  // Dropdown hover
+  // 드롭다운 메뉴
   $('.dropdown').hover(
     function() {
-      // ...dropdown hover in code...
       $(this).children('ul').slideDown(500);
     },
     function() {
-      // ...dropdown hover out code...
       $(this).children('ul').slideUp(500);
     }
   );
 
-  // TypeIt instance code
+  // TypeIt 세팅
   new TypeIt("#Introtext", {
-    // ...TypeIt options...
       strings: [""],
       speed: 50,
       deleteSpeed: 30,
@@ -69,23 +46,37 @@ $(function() {
     .pause(2000)
     .go();
 
-  // Design popup click event
+  // 디자인 썸네일 팝업
+  $('[class^="design_thumb"]').click(function() {
+    let num = parseInt($(this).attr('class').match(/\d+/));
+    $('.popup_bg' + num).stop().fadeIn();
+    $('body').on('scroll touchmove mousewheel', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
+  });
+  $('.close_btn').click(function(){
+    let num = parseInt($(this).closest('.popup_bg').attr('class').match(/\d+/));
+    $('.popup_bg' + num).stop().fadeOut();
+    $('body').off('scroll touchmove mousewheel');
+  });
+
+  // 팝업 클릭
   for (let i = 1; i <= 7; i++) {
     $(`.design_thumb${i}`).click(function() {
-      //...design_thumb click code...
       $(`.popup_bg${i}, .container${i}`).show();
     });
-
     $(`.container${i} .close_btn`).click(function() {
-      //...close_btn click code...
       $(`.popup_bg${i}, .container${i}`).hide();
     });
   }
 
-  // Overflow control
-  if (".popup_bg1,.popup_bg2,.popup_bg3") {
+  // 팝업 오버플로우
+  if (".popup_bg1, .popup_bg2, .popup_bg3, .popup_bg4, .popup_bg5, .popup_bg6, .popup_bg7") {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'auto';
   }
+
 });
