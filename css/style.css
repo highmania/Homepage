@@ -136,10 +136,10 @@ nav .nav_list .dropdown:hover > ul {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-size: 150% 150%;;
+    background-size: 120% 120%;;
     background-repeat: no-repeat;
     background-image: url(../images/bg.jpg);
-    animation: backgroundChange 12s ease-in-out infinite;
+    animation: backgroundChange 30s ease-in-out infinite;
     overflow: hidden;
 }
 @keyframes backgroundChange {
